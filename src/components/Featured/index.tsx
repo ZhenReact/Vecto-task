@@ -19,10 +19,10 @@ const FeaturedVideo = () => {
   }, [featured]);
 
   if (!featured) return null;
-
+ 
   return (
-    <section className=" z-10 text-white overflow-hidden h-screen">
-      <div className="absolute w-full h-full">
+    <section className=" z-10 text-white overflow-hidden justify-content: end;">
+      <div className="absolute w-full h-full top-0 bg-[#040404]">
         {!showVideo ? (
           <img
             src={`assets/movies/${featured.CoverImage}`}
@@ -32,14 +32,14 @@ const FeaturedVideo = () => {
         ) : (
           <video
             src={featured.VideoUrl}
-            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+            className="absolute top-0 left-0 w-full h-full object-cover z-[0]"
             autoPlay
             muted
             loop
             playsInline
           />
         )}
-        <div className="pl-4  mt-[11.25rem]">
+        <div className="pl-4  mt-[11.25rem] relative">
           <p className="text-[#858688] uppercase text-[1rem] lg:text-[1.7vw] font-semibold">
             {featured.Category}
           </p>

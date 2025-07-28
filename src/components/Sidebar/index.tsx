@@ -42,12 +42,12 @@ const Sidebar: React.FC = () => {
 
   return (
     <aside
-      className={`transition-all fixed h-screen text-white top-0 left-0 z-[20] bg-[#040404] w-[6.5rem]  ${ expanded ? "lg:w-[22.5rem]" : "md:w-[9.813rem]"} pt-[10vw]`}
+      className={`transition-all fixed h-[93px] md:h-screen text-white bottom-0 md:top-0 left-0 z-[20] bg-[#040404] w-full    ${ expanded ? "lg:w-[22.5rem]" : "md:w-[9.813rem]"} md:pt-[11.25rem]`} 
       onMouseEnter={() => isDesktop && setExpanded(true)}
       onMouseLeave={() => isDesktop && setExpanded(false)}
     >
       {expanded && (
-        <div className="flex items-center gap-[.5rem] cursor-pointer w-full rounded transition mb-6 absolute top-[3.25rem] z-[1] px-[24px]">
+        <div className="flex items-center gap-[.5rem] cursor-pointer w-full rounded transition mb-6 absolute top-[4rem] z-[1] px-[24px]">
           <img
             src={profile_img}
             alt="Profile"
@@ -68,12 +68,12 @@ const Sidebar: React.FC = () => {
       )}
 
       <div
-        className={`flex flex-col justify-between h-full py-4 p-6 relative ${
+        className={`flex flex-col justify-end md:justify-between h-full w-full py-4  relative ${
           expanded ? "items-start" : "items-center"
-        } max-w-[22.5rem] overflow-auto scrollbar-hidden`}
+        } md:max-w-[22.5rem] overflow-auto scrollbar-hidden`}
       >
         <nav
-          className={`flex flex-col gap-4 ${
+          className={`flex md:flex-col gap-4 ${
             expanded ? "w-full items-start" : "items-center"
           }`}
         >

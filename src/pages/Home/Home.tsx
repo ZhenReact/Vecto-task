@@ -24,7 +24,7 @@ const Home = () => {
     <div className="relative flex min-h-screen overflow-hidden font-[tajawal]">
       <Sidebar />
 
-      <div className="flex flex-col flex-1 overflow-y-auto gap-[9.25rem] pl-[6.25rem] md:pl-[9.25rem]">
+      <div className="flex flex-col flex-1 overflow-y-auto gap-[9.25rem] max-md:pl-[unset] max-md:pb-[100px] pl-[9.5rem]  justify-end ">
         <FeaturedVideo />
         <TrendingCarousel />
       </div>

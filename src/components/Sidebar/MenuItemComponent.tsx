@@ -18,14 +18,14 @@ const MenuItemComponent: React.FC<MenuItemProps> = ({
   const activeClasses = isActive
     ? "text-white shadow-lg bg-[#3b486d] font-bold"
     : "hover:bg-[#3b486d]";
-
-  return (
+ 
+    return (
     <Link
       to={path}
       className={`flex items-center cursor-pointer rounded  transition ${activeClasses} ${
         expanded
           ? "w-[25px] h-[25px]  gap-[3.25rem] w-full py-9 px-4"
-          : "w-full h-full justify-center px-[1rem] py-[1rem] lg:px-[1.625rem] lg:py-[26px] rounded-[50%]"
+          : "w-full h-full justify-center px-[1rem] py-[1rem]  rounded-[50%] lg:p-[1.65rem] "
       }`}
       title={!expanded ? label : undefined}
     >
